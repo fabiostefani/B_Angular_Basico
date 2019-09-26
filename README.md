@@ -28,7 +28,18 @@ Iniciando os estudos em Angular. Projeto básico para entender os conceitos.
     Trabalha sempre com Modules e Components.
     Um compomente é composto por 3 arquivos (.ts, .html e .css)
     Tanto no module, quando no Component, é usado Decorator para deixar informações do componente de modo público.
+    Trabalha com Binds entre o TS e a tela. Sempre que ocorrer alguma alteração já é atualizado de forma automatica. Tipos de Bind
+        () = Tela > TS
+        [] = TS > Tela
+        ([]) = TS <> Tela
 
 . Para rodar a aplicação
     no terminal, ng serve
     para já abrir o browser após a compilação, executar ng serve -o
+
+. Anotações
+    No HTML, se você colocar chaves Duplas irá mostrar o texto da variável
+    {{title}} por exemplo
+    *ngFor > itera a lista, foreach c#
+    *ngIf > condição
+
