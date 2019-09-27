@@ -40,6 +40,7 @@ Iniciando os estudos em Angular. Projeto básico para entender os conceitos.
 . Anotações
     No HTML, se você colocar chaves Duplas irá mostrar o texto da variável
     {{title}} por exemplo
-    *ngFor > itera a lista, foreach c#
-    *ngIf > condição
+        *ngFor > itera a lista, foreach c#
+        *ngIf > condição
+    Para utilizar formulário reativo no Angular, deve ser importado o 'ReactiveFormsModule'. Verificar no App.module
 
