@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AppComponent {
   //title = 'todo';
+  public mode = 'list';
   public todos: Todo[] = []; // SE VISUALIZAR NO CONSOLE, VAI ESTAR VAZIO.
   //public todos2: any[]; // SE VISUALIZAR NO CONSOLE, VAI ESTAR UNDEFINED.
   public title: String = 'Minhas tarefas';
@@ -42,6 +43,7 @@ export class AppComponent {
 
     this.salvarStorage();
     this.limparForm();
+    this.changeMode('list');
   }
 
   concluirTarefa(todo: Todo) {
@@ -73,7 +75,15 @@ export class AppComponent {
 
   carregarStorage() {
     const data = localStorage.getItem(this._constData);
-    this.todos = JSON.parse(data);
+    if (data) {
+      this.todos = JSON.parse(data);
+    } else {
+      this.todos = [];
+    }
+  }
+
+  changeMode(mode: string) {
+    this.mode = mode;
   }
 
 }
